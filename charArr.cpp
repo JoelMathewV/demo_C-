@@ -7,8 +7,9 @@ int main(){
     char arr[n+1];
     cin.getline(arr,n);
     cin.ignore();
+    cout<<arr<<endl;
     int len=0,maxlen=0;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<=n;i++){
         maxlen=max(len,maxlen);
         if(arr[i]==' ' || arr[i]=='\0'){
             len=0;
