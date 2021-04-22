@@ -11,9 +11,20 @@ int noofones(int n){
     }
     return count;
 }
+int unique(int ar[], int n){
+    int xorsum=0;
+    for(int i=0;i<n;i++){
+        xorsum=xorsum^ar[i];
+    }
+    return xorsum;
+}
 int main(){
     int n;
     cin>>n;
-    cout<<noofones(n)<<endl;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<unique(arr,7)<<endl;
     return 0;
 }
