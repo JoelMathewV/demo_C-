@@ -17,8 +17,16 @@ int pow(int n, int p){  //power of a no. to n
     return n*prev;
 }
 
-int main(){
-    cout<<pow(2,5)<<endl;
+int factorial(int n){
+    int prev;
+    if(n==0){
+        return 1;
+    }
+    prev = factorial(n-1);
+    return n*prev;
+}
 
+int main(){
+    cout<<factorial(8)<<endl;
     return 0;
 }
