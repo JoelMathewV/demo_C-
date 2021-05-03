@@ -51,10 +51,25 @@ void rev(string a){
     cout << a[0];
 }
 
+//replace pi with 3.14
+void replacePi(string a){
+    if (a.length()==0){
+        return;
+    }
+    if (a[0]=='p' && a[1]=='i'){
+        cout<<3.14;
+        replacePi(a.substr(2));
+    }
+    else{
+        cout<<a[0];
+        replacePi(a.substr(1));
+    }
+}
+
 int main(){
-    string a = "Binod";
+    //string a = "Binod";
     //int n=5;
-    rev("binod");
+    replacePi("pippppiiiipi");
     cout << endl;
     return 0;
 }
