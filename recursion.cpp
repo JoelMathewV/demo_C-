@@ -41,9 +41,20 @@ bool sort(int arr[], int n){
     return (arr[0]<arr[1] && restArr);
 }
 
+//Reverse a string
+void rev(string a){
+    if(a.length() == 0){
+        return;
+    }
+    string small = a.substr(1);
+    rev(small);
+    cout << a[0];
+}
+
 int main(){
-    int arr[5] = {1,2,3,4,5};
-    int n=5;
-    cout<<sort(arr, n)<<endl;
+    string a = "Binod";
+    //int n=5;
+    rev("binod");
+    cout << endl;
     return 0;
 }
