@@ -66,10 +66,20 @@ void replacePi(string a){
     }
 }
 
+//to remove duplicate letters
+string removeDup(string a){
+    if(a.length()==0){
+        return "";
+    }
+    string ans = removeDup(a.substr(1));
+    if(a[0]==ans[0]){
+        return ans;
+    }
+    return a[0] + ans;
+}
+
 int main(){
-    //string a = "Binod";
-    //int n=5;
-    replacePi("pippppiiiipi");
+    cout<<removeDup("aaaabbbbbccccddddeeeffggghhiiijjjkkklllmmmnnnoooppppqqqqrrrssstttuuuuvvvvwwwwwwxxxxyyyyyzzzz");
     cout << endl;
     return 0;
 }
