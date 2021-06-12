@@ -79,7 +79,10 @@ string removeDup(string a){
 }
 
 int main(){
-    cout<<removeDup("aaaabbbbbccccddddeeeffggghhiiijjjkkklllmmmnnnoooppppqqqqrrrssstttuuuuvvvvwwwwwwxxxxyyyyyzzzz");
-    cout << endl;
+    int n=0;
+    for (int i=10;i<=19;i++){
+        n=n+fibbo(i);
+    }
+    cout<<n<<endl;
     return 0;
 }
