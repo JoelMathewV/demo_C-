@@ -21,7 +21,14 @@ int main(){
     for(auto &i : a){
         cin>>i;
     }
-    permute(a,0);
+
+    //STL trick
+    sort(a.begin(), a.end());
+    do{
+        ans.push_back(a);
+    }while (next_permutation(a.begin(),a.end()));
+    
+    //permute(a,0);
     for(auto v:ans){
         for(auto i:v){
             cout<<i<<" ";
