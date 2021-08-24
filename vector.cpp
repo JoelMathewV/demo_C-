@@ -13,5 +13,8 @@ int main(){
     for(it=v.begin();it<v.end();it++){
         cout<<*it<<endl;
     }
+    for(auto element:v){
+        cout<<element<<endl;
+    }
     return 0;
 }
