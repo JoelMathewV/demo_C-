@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/first-bad-version/
+
 #include <iostream>
 using namespace std;
 bool isBadVersion(int n){
