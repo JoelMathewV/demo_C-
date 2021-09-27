@@ -49,10 +49,18 @@ class employee:abstractEmp{
     }
 
 };
+
+class developer: public employee{                   //inheritance
+    public:
+    string lang;
+    developer(string name, string company, int age, string Lang)
+        :employee(name, company, age)
+    {
+        lang = Lang;
+    }
+};
 int main(){
-    employee joel = employee("joel", "amazon", 19);
-    joel.Introduce();
-    joel.setName("noel");
-    joel.AskForPromotion();
+    developer a = developer("joel", "YT", 19, "C++");
+    a.AskForPromotion();
     return 0;
 }
